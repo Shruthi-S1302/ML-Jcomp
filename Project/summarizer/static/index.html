@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Summarizer</title>
+</head>
+
+<body align="center">
+    <h1>Summarizer</h1>
+    <form action="summarize/" method="post">
+        {% csrf_token %}
+        <label for="text">Enter the news article:</label><br><br>
+        <textarea id="text" name="text" rows="10" cols="50"></textarea>
+        <br><br><br><br>
+        <input type="submit" value="Summarize">
+    </form>
+    {% if summary %}
+    <h2>Summary:</h2>
+    <p>{{ summary }}</p>
+    {% endif %}
+    <br><br><br><br><br><br><br><br><br>
+    <footer>
+        A Project by Riddhiman R 20BCE1624 and Shruthi S 20BCE1986
+    </footer>
+</body>
+
+</html>
